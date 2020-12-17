@@ -64,10 +64,7 @@ Base URLs:
 {{= data.tags.section }}
 <h2 id="tocS_{{=s}}">{{=s}}</h2>
 {{ /* backwards compatibility */ }}
-<a id="schema{{=s.toLowerCase()}}"></a>
-<a id="schema_{{=s}}"></a>
-<a id="tocS{{=s.toLowerCase()}}"></a>
-<a id="tocs{{=s.toLowerCase()}}"></a>
+<a id="schema{{=s.toLowerCase()}}"></a><a id="schema_{{=s}}"></a><a id="tocS{{=s.toLowerCase()}}"></a><a id="tocs{{=s.toLowerCase()}}"></a>
 
 {{? data.options.yaml }}
 ```yaml

@@ -15,13 +15,17 @@
 {{ data.utils.mergePathParameters(data); }}
 {{ data.utils.getParameters(data); }}
 
+```
+{{= data.methodUpper}} {{=data.method.path}}
+```
+
+<details>
+
 {{? data.options.codeSamples || data.operation["x-code-samples"] }}
 > Code samples
 
 {{= data.utils.getCodeSamples(data) }}
 {{?}}
-
-`{{= data.methodUpper}} {{=data.method.path}}`
 
 {{? data.operation.summary && !data.options.tocSummary}}*{{= data.operation.summary }}*{{?}}
 
@@ -43,12 +47,6 @@
 
 {{#def.responses}}
 
-{{#def.callbacks}}
+</details>
 
-{{ data.security = data.operation.security ? data.operation.security : data.api.security; }}
-{{? data.security && data.security.length }}
-{{#def.authentication}}
-{{??}}
-{{#def.authentication_none}}
-{{?}}
 {{= data.tags.endSection }}
